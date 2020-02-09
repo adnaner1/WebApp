@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/App.js"
+    "start": "node ./src/App.js",
+    "dev": "nodemon ./src/App.js -e js,hbs,css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.0"
+    "hbs": "^4.1.0",
+    "nodemon": "^2.0.2"
   }
 }
