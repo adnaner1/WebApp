@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+  <meta charset="UTF-8" >
+  <title>CodePen - Pure CSS Fly In Sidebar Nav</title>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link href='./css/font.css'  rel='stylesheet' type='text/css'><link rel="stylesheet" href='./css/min.css' >
+<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<section class="app">
+
+  <header>
+    <div class="clock">
+
+      <div class="clock__second"></div>
+      <div class="clock__minute"></div>
+        <div class="clock__hour"></div>
+      <div class="clock__axis"></div>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+        <section class="clock__indicator"></section>
+    </div>
+    <!-- partial -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  </header>
+
+  <aside class="sidebar">
+
+      <header>
+
+        <button class="OpenBtn" id="openbtn">☰</button>
+        <button class="CloseBtn" id="closebtn">X</button>
+        <input type="Checkbox" id="toggle" class="checkbox" />
+        <label for="toggle" class="switch"></label>
+
+      </header>
+
+    <nav class="sidebar-nav">
+
+      <ul>
+        <li>
+          <a href="/"><i class="ion-ios-pulse-strong" ></i> <span class="Dashboard" id="dashboard">{{title}}</span></a>
+          <ul class="nav-flyout">
+            <li>
+              <a href="#"><i class="ion-ios-home"></i>Main</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-thermometer"></i>Temperatures</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-speedometer"></i>Status</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-android-options"></i>Settings</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/Alarm"><i class="ion-ios-bell"></i> <span class="Alarm" id="alarm" >Alarm</span></a>
+          <ul class="nav-flyout">
+<!--
+            <li>
+              <a href="#"><i class="ion-calendar"></i>Active</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-log-in"></i>History</a>
+            </li>
+-->
+          </ul>
+        </li>
+
+        <li>
+          <a href="/Maintenance"><i class="ion-wrench"></i> <span class="Maintenance" id="maintenance" >Maintenance</span></a>
+          <ul class="nav-flyout">
+<!--
+            <li>
+              <a href="#"><i class="ion-ios-timer-outline"></i>Timers</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-settings"></i>Schedule</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-partlysunny-outline"></i>Stormy</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-timer-outline"></i>Lookie Look</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-game-controller-a-outline"></i>Dork Mfer</a>
+            </li>
+-->
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="ion-ios-cog-outline"></i> <span class="Control"  id="control">Control</span></a>
+          <ul class="nav-flyout">
+<!--
+            <li>
+              <a href="#"><i class="ion-ios-alarm-outline"></i>Watch</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-camera-outline"></i>Creeper</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-chatboxes-outline"></i>Hate</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-cog-outline"></i>Grinder</a>
+            </li>
+-->
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="ion-android-folder"></i> <span class="Files" id="files" >Files</span></a>
+          <ul class="nav-flyout">
+<!--
+            <li>
+              <a href="#"><i class="ion-document-text"></i>Manual</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-document"></i>Schematic</a>
+            </li>
+-->
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="ion-location"></i> <span class="Locate" id="locate" >Locate</span></a>
+
+        </li>
+        <li>
+          <a href="#"><i class="ion-ios-email"></i> <span class="Contact" id="contact"  >Contact Us</span></a>
+          <ul class="nav-flyout">
+<!--
+            <li>
+              <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-lightbulb-outline"></i>Bulbs</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-location-outline"></i>Where You</a>
+            </li>
+            <li>
+              <a href="#"><i class="ion-ios-locked-outline"></i>On Lock</a>
+            </li>
+             <li>
+              <a href="#"><i class="ion-ios-navigate-outline"></i>Ghostface</a>
+            </li>
+-->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+</section>
+<!-- partial -->
+<script src="./js/script.js"></script>
+</body>
+</html>

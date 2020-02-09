@@ -1,0 +1,680 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+
+
+
+body {
+  font-family: "Lato";
+  font-size: 100%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #0f0f0f;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0s ease;
+  -moz-transition: all 0s ease;
+  transition: all 0s ease;
+
+}
+a:hover {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+    border-radius: 20px;
+}
+
+.app {
+  height: 100vh;
+}
+
+.app header {
+  background-color: #000000;
+  width: 100% ;
+  display: block;
+  position: static;
+  padding: 5em	0em;
+    border-radius: 10px;
+}
+
+
+
+/* -------------
+Sidebar
+----------------*/
+.sidebar {
+  position: absolute;
+  width: 17em;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  background-color: #19222a;
+  transform:translateZ(0);
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.sidebar header {
+  position: relative;
+  background-color: #080D11;
+  width: 100% ;
+  display: block;
+  padding: 0.75em	0em;
+    border-radius: 10px;
+}
+
+/* -------------
+Sidebar Nav
+----------------*/
+.sidebar-nav {
+  position: fixed;
+  background-color: #19222a;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.5em;
+  overflow: auto;
+  padding-bottom: 6em;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* -------------
+  Chev elements
+  ----------------*/
+  /* -------------
+  Nav-Flyout
+  ----------------*/
+  /* -------------
+  Hover
+  ----------------*/
+}
+.sidebar-nav ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 100%;
+  /* -------------
+  Sidebar: icons
+  ----------------*/
+}
+.sidebar-nav ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75em;
+  padding: 1.05em	1em;
+  position: relative;
+  display: block;
+}
+.sidebar-nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 1);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.sidebar-nav ul li i {
+  font-size: 1.8em;
+  padding-right: 0.5em;
+  
+  display: inline;
+  vertical-align: middle;
+}
+.sidebar-nav > ul > li > a:after {
+  content: '\f125';
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: #fff;
+  position: absolute;
+  right: 0.75em;
+  top: 45%;
+}
+.sidebar-nav .nav-flyout {
+  position: absolute;
+  background-color: #080D11;
+  z-index: 9;
+  left: 2.5em;
+  top: 0;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.sidebar-nav .nav-flyout a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-nav ul > li:hover .nav-flyout {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+/*   Toggle switch */
+
+.switch {
+  cursor: pointer;
+  position: absolute;
+  display: inline-block;
+  left : 110px;
+  top : 27px;
+  width: 40px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  transition: all 0.1s;
+}
+
+
+.switch::after {
+  cursor: pointer;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius:100%;
+  background-color: green;
+  top: -5px;
+  left: -7px;
+  transition: all 0.1s;
+}
+
+.checkbox:checked + .switch::after {
+  left : 30px;
+}
+.checkbox:checked + .switch  {
+  background-color: GreenYellow;
+}
+.checkbox {
+  display : none;
+}
+
+/*  ion icons style */
+
+
+.ion-ios-pulse-strong{
+  color : chartreuse;
+}
+
+.ion-ios-home{
+  color : NavajoWhite;
+}
+
+.ion-thermometer{
+  color : deepskyblue;
+  position : relative;
+  left :5px;
+}
+
+.ion-ios-speedometer{
+  color : Tomato;
+}
+
+.ion-android-options{
+  color : dodgerblue;
+}
+
+.ion-ios-cog-outline{
+  color : lime;
+}
+
+.ion-ios-bell{
+  color : red;
+}
+
+.ion-wrench{
+  color : yellow;
+}
+
+.ion-android-folder{
+  color : skyblue;
+}
+
+.ion-location{
+  color : orchid;
+}
+
+.ion-ios-email{
+  color : dodgerblue;
+}
+
+
+/*   open & close sidebar button */
+
+
+.OpenBtn {
+  cursor: pointer;
+  background-color: #080D11;
+  border: 2px solid #19222a;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 10px;
+  position:  relative;
+  left: 10px;
+}
+
+.CloseBtn {
+  cursor: pointer;
+  background-color: #080D11;
+  border: 2px solid #19222a;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 10px;
+  position:  absolute;
+  right: 5px;
+}
+
+
+
+
+/* clock */
+
+p {
+  color: #ffffff;
+  font-size: 0.8em;
+  opacity: 0.75;
+}
+
+.clock {
+  height: 150px;
+  width:150px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left : 280px;
+  top : 7px;
+}
+
+
+.clock__second, .clock__minute, .clock__hour, .clock__indicator {
+  position: absolute;
+  left: calc(1% - 1px);
+  width: 2px;
+  background: #f4eed7;
+  left: 74px;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  z-index: 2;
+  border-radius: 1px;
+}
+.clock__second {
+  height: 64px;
+  margin-top: 10px;
+  background: #4b9aaa;
+  -webkit-animation: time 60s infinite steps(60);
+          animation: time 60s infinite steps(60);
+  z-index: 3;
+}
+.clock__minute {
+  height: 54px;
+  margin-top: 20px;
+  opacity: 0.75;
+  -webkit-animation: time 3600s linear infinite;
+          animation: time 3600s linear infinite;
+}
+.clock__hour {
+  height: 44px;
+  margin-top: 30px;
+  -webkit-animation: time 43200s linear infinite;
+          animation: time 43200s linear infinite;
+}
+.clock__indicator {
+  height: 71px;
+  border-top: 2px solid #ff0000;
+  background: none;
+}
+.clock__indicator:nth-of-type(5n) {
+  opacity: 1;
+  height: 67px;
+  border-top: 7px solid #ffff00;
+}
+.clock__axis {
+  background: #00ff00;
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  left : 0px;
+  position: relative;
+  z-index: 4;
+  top: 72px;
+}
+
+
+
+
+
+section:nth-of-type(2) {
+  -webkit-transform: rotateZ(calc(6deg * 2));
+          transform: rotateZ(calc(6deg * 2));
+}
+
+section:nth-of-type(3) {
+  -webkit-transform: rotateZ(calc(6deg * 3));
+          transform: rotateZ(calc(6deg * 3));
+}
+
+section:nth-of-type(4) {
+  -webkit-transform: rotateZ(calc(6deg * 4));
+          transform: rotateZ(calc(6deg * 4));
+}
+
+section:nth-of-type(5) {
+  -webkit-transform: rotateZ(calc(6deg * 5));
+          transform: rotateZ(calc(6deg * 5));
+}
+
+section:nth-of-type(6) {
+  -webkit-transform: rotateZ(calc(6deg * 6));
+          transform: rotateZ(calc(6deg * 6));
+}
+
+section:nth-of-type(7) {
+  -webkit-transform: rotateZ(calc(6deg * 7));
+          transform: rotateZ(calc(6deg * 7));
+}
+
+section:nth-of-type(8) {
+  -webkit-transform: rotateZ(calc(6deg * 8));
+          transform: rotateZ(calc(6deg * 8));
+}
+
+section:nth-of-type(9) {
+  -webkit-transform: rotateZ(calc(6deg * 9));
+          transform: rotateZ(calc(6deg * 9));
+}
+
+section:nth-of-type(10) {
+  -webkit-transform: rotateZ(calc(6deg * 10));
+          transform: rotateZ(calc(6deg * 10));
+}
+
+section:nth-of-type(11) {
+  -webkit-transform: rotateZ(calc(6deg * 11));
+          transform: rotateZ(calc(6deg * 11));
+}
+
+section:nth-of-type(12) {
+  -webkit-transform: rotateZ(calc(6deg * 12));
+          transform: rotateZ(calc(6deg * 12));
+}
+
+section:nth-of-type(13) {
+  -webkit-transform: rotateZ(calc(6deg * 13));
+          transform: rotateZ(calc(6deg * 13));
+}
+
+section:nth-of-type(14) {
+  -webkit-transform: rotateZ(calc(6deg * 14));
+          transform: rotateZ(calc(6deg * 14));
+}
+
+section:nth-of-type(15) {
+  -webkit-transform: rotateZ(calc(6deg * 15));
+          transform: rotateZ(calc(6deg * 15));
+}
+
+section:nth-of-type(16) {
+  -webkit-transform: rotateZ(calc(6deg * 16));
+          transform: rotateZ(calc(6deg * 16));
+}
+
+section:nth-of-type(17) {
+  -webkit-transform: rotateZ(calc(6deg * 17));
+          transform: rotateZ(calc(6deg * 17));
+}
+
+section:nth-of-type(18) {
+  -webkit-transform: rotateZ(calc(6deg * 18));
+          transform: rotateZ(calc(6deg * 18));
+}
+
+section:nth-of-type(19) {
+  -webkit-transform: rotateZ(calc(6deg * 19));
+          transform: rotateZ(calc(6deg * 19));
+}
+
+section:nth-of-type(20) {
+  -webkit-transform: rotateZ(calc(6deg * 20));
+          transform: rotateZ(calc(6deg * 20));
+}
+
+section:nth-of-type(21) {
+  -webkit-transform: rotateZ(calc(6deg * 21));
+          transform: rotateZ(calc(6deg * 21));
+}
+
+section:nth-of-type(22) {
+  -webkit-transform: rotateZ(calc(6deg * 22));
+          transform: rotateZ(calc(6deg * 22));
+}
+
+section:nth-of-type(23) {
+  -webkit-transform: rotateZ(calc(6deg * 23));
+          transform: rotateZ(calc(6deg * 23));
+}
+
+section:nth-of-type(24) {
+  -webkit-transform: rotateZ(calc(6deg * 24));
+          transform: rotateZ(calc(6deg * 24));
+}
+
+section:nth-of-type(25) {
+  -webkit-transform: rotateZ(calc(6deg * 25));
+          transform: rotateZ(calc(6deg * 25));
+}
+
+section:nth-of-type(26) {
+  -webkit-transform: rotateZ(calc(6deg * 26));
+          transform: rotateZ(calc(6deg * 26));
+}
+
+section:nth-of-type(27) {
+  -webkit-transform: rotateZ(calc(6deg * 27));
+          transform: rotateZ(calc(6deg * 27));
+}
+
+section:nth-of-type(28) {
+  -webkit-transform: rotateZ(calc(6deg * 28));
+          transform: rotateZ(calc(6deg * 28));
+}
+
+section:nth-of-type(29) {
+  -webkit-transform: rotateZ(calc(6deg * 29));
+          transform: rotateZ(calc(6deg * 29));
+}
+
+section:nth-of-type(30) {
+  -webkit-transform: rotateZ(calc(6deg * 30));
+          transform: rotateZ(calc(6deg * 30));
+}
+
+section:nth-of-type(31) {
+  -webkit-transform: rotateZ(calc(6deg * 31));
+          transform: rotateZ(calc(6deg * 31));
+}
+
+section:nth-of-type(32) {
+  -webkit-transform: rotateZ(calc(6deg * 32));
+          transform: rotateZ(calc(6deg * 32));
+}
+
+section:nth-of-type(33) {
+  -webkit-transform: rotateZ(calc(6deg * 33));
+          transform: rotateZ(calc(6deg * 33));
+}
+
+section:nth-of-type(34) {
+  -webkit-transform: rotateZ(calc(6deg * 34));
+          transform: rotateZ(calc(6deg * 34));
+}
+
+section:nth-of-type(35) {
+  -webkit-transform: rotateZ(calc(6deg * 35));
+          transform: rotateZ(calc(6deg * 35));
+}
+
+section:nth-of-type(36) {
+  -webkit-transform: rotateZ(calc(6deg * 36));
+          transform: rotateZ(calc(6deg * 36));
+}
+
+section:nth-of-type(37) {
+  -webkit-transform: rotateZ(calc(6deg * 37));
+          transform: rotateZ(calc(6deg * 37));
+}
+
+section:nth-of-type(38) {
+  -webkit-transform: rotateZ(calc(6deg * 38));
+          transform: rotateZ(calc(6deg * 38));
+}
+
+section:nth-of-type(39) {
+  -webkit-transform: rotateZ(calc(6deg * 39));
+          transform: rotateZ(calc(6deg * 39));
+}
+
+section:nth-of-type(40) {
+  -webkit-transform: rotateZ(calc(6deg * 40));
+          transform: rotateZ(calc(6deg * 40));
+}
+
+section:nth-of-type(41) {
+  -webkit-transform: rotateZ(calc(6deg * 41));
+          transform: rotateZ(calc(6deg * 41));
+}
+
+section:nth-of-type(42) {
+  -webkit-transform: rotateZ(calc(6deg * 42));
+          transform: rotateZ(calc(6deg * 42));
+}
+
+section:nth-of-type(43) {
+  -webkit-transform: rotateZ(calc(6deg * 43));
+          transform: rotateZ(calc(6deg * 43));
+}
+
+section:nth-of-type(44) {
+  -webkit-transform: rotateZ(calc(6deg * 44));
+          transform: rotateZ(calc(6deg * 44));
+}
+
+section:nth-of-type(45) {
+  -webkit-transform: rotateZ(calc(6deg * 45));
+          transform: rotateZ(calc(6deg * 45));
+}
+
+section:nth-of-type(46) {
+  -webkit-transform: rotateZ(calc(6deg * 46));
+          transform: rotateZ(calc(6deg * 46));
+}
+
+section:nth-of-type(47) {
+  -webkit-transform: rotateZ(calc(6deg * 47));
+          transform: rotateZ(calc(6deg * 47));
+}
+
+section:nth-of-type(48) {
+  -webkit-transform: rotateZ(calc(6deg * 48));
+          transform: rotateZ(calc(6deg * 48));
+}
+
+section:nth-of-type(49) {
+  -webkit-transform: rotateZ(calc(6deg * 49));
+          transform: rotateZ(calc(6deg * 49));
+}
+
+section:nth-of-type(50) {
+  -webkit-transform: rotateZ(calc(6deg * 50));
+          transform: rotateZ(calc(6deg * 50));
+}
+
+section:nth-of-type(51) {
+  -webkit-transform: rotateZ(calc(6deg * 51));
+          transform: rotateZ(calc(6deg * 51));
+}
+
+section:nth-of-type(52) {
+  -webkit-transform: rotateZ(calc(6deg * 52));
+          transform: rotateZ(calc(6deg * 52));
+}
+
+section:nth-of-type(53) {
+  -webkit-transform: rotateZ(calc(6deg * 53));
+          transform: rotateZ(calc(6deg * 53));
+}
+
+section:nth-of-type(54) {
+  -webkit-transform: rotateZ(calc(6deg * 54));
+          transform: rotateZ(calc(6deg * 54));
+}
+
+section:nth-of-type(55) {
+  -webkit-transform: rotateZ(calc(6deg * 55));
+          transform: rotateZ(calc(6deg * 55));
+}
+
+section:nth-of-type(56) {
+  -webkit-transform: rotateZ(calc(6deg * 56));
+          transform: rotateZ(calc(6deg * 56));
+}
+
+section:nth-of-type(57) {
+  -webkit-transform: rotateZ(calc(6deg * 57));
+          transform: rotateZ(calc(6deg * 57));
+}
+
+section:nth-of-type(58) {
+  -webkit-transform: rotateZ(calc(6deg * 58));
+          transform: rotateZ(calc(6deg * 58));
+}
+
+
+section:nth-of-type(60) {
+  -webkit-transform: rotateZ(calc(6deg * 60));
+          transform: rotateZ(calc(6deg * 60));
+}
+
+@-webkit-keyframes time {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes time {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
