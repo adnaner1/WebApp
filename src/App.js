@@ -3,7 +3,7 @@ const path =  require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
- 
+const port = process.env.PORT || 3000
 // define paths for express 
 const puplicdirectorypath = path.join(__dirname, '../puplic')
 const viewspath = path.join(__dirname, '../html/views')
@@ -64,9 +64,9 @@ app.get('*' , (req , res) => {
 
 // server starter 
 
-app.listen(3000 , () => {
+app.listen(port , () => {
 
-    console.log('server started')
+    console.log('Server started on port : ' + port)
     
 });
 
