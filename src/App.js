@@ -5,9 +5,9 @@ const hbs = require('hbs')
 const app = express()
 const port = process.env.PORT || 3000
 // define paths for express 
-const puplicdirectorypath = path.join(__dirname, '../puplic')
-const viewspath = path.join(__dirname, '../html/views')
-const partialspath = path.join(__dirname, '../html/partials')
+const puplicdirectorypath = path.join(__dirname, './puplic')
+const viewspath = path.join(__dirname, './html/views')
+const partialspath = path.join(__dirname, './html/partials')
 
 // setup handlebars engines and views location 
 app.set('view engine', 'hbs')
