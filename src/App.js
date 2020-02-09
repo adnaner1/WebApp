@@ -41,8 +41,8 @@ app.get('/Alarm', (req , res) => {
 app.get('/Maintenance', (req , res) => {
 
     res.render('Maintenance',{
-       title:'Setting',
-       name:'Document'
+       title:'Settings',
+       name:'Documents'
     })
 
 })
@@ -54,7 +54,6 @@ app.get('/weather' , (req , res) => {
     name:'Document'})
 
 })
-
 
 // 404 not found page
 app.get('*' , (req , res) => {
