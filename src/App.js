@@ -13,7 +13,6 @@ const partialspath = path.join(__dirname, '../html/partials')
 app.set('view engine', 'hbs')
 app.set('views', viewspath)
 hbs.registerPartials(partialspath)
-
 // setuo static directory to serve
 app.use(express.static(puplicdirectorypath))
 
