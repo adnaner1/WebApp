@@ -311,7 +311,7 @@ p {
   border-radius: 50px;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   left : 280px;
   top : 7px;
 }
