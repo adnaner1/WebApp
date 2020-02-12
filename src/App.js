@@ -48,48 +48,10 @@ app.get('/Maintenance', (req , res) => {
 })
 
 
-  // config for your database
-  var config = {
-    user: 'Adnaner',                                        
-    password: 'Bom86596',
-    server: 'adnane.database.windows.net', 
-    database: 'Radiot' ,
-    "options": {
-        "encrypt": true,
-        "enableArithAbort": true
-        },
-};
-
-
-
-  // connect to your database
-  const mydata = sql.connect(config, function (err) {
-       
-    if (err) console.log(err);
-
-    // create Request object
-    var request = new sql.Request();
-
-    // query to the database and get the records
-    request.query('select * from Table_1 ORDER BY date', function (err, recordset) {
-        
-        if (err) console.log(err)
-
-        // send records as a response
-        res.send(recordset);
-        
-    });
-});
-
-
-
-
-
 app.get('/Files', (req , res) => {
 
     res.render('Files',{
      
-        mydata
         
     })
 
