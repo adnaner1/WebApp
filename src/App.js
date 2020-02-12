@@ -3,6 +3,7 @@ const path =  require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+var sql = require("mssql");
 const port = process.env.PORT || 3000
 // define paths for express 
 const puplicdirectorypath = path.join(__dirname, '/../puplic')
@@ -42,6 +43,54 @@ app.get('/Maintenance', (req , res) => {
     res.render('Maintenance',{
        title:'Settings',
        name:'Documents'
+    })
+
+})
+
+
+  // config for your database
+  var config = {
+    user: 'Adnaner',                                        
+    password: 'Bom86596',
+    server: 'adnane.database.windows.net', 
+    database: 'Radiot' ,
+    "options": {
+        "encrypt": true,
+        "enableArithAbort": true
+        },
+};
+
+
+
+  // connect to your database
+  const mydata = sql.connect(config, function (err) {
+       
+    if (err) console.log(err);
+
+    // create Request object
+    var request = new sql.Request();
+
+    // query to the database and get the records
+    request.query('select * from Table_1 ORDER BY date', function (err, recordset) {
+        
+        if (err) console.log(err)
+
+        // send records as a response
+        res.send(recordset);
+        
+    });
+});
+
+
+
+
+
+app.get('/Files', (req , res) => {
+
+    res.render('Files',{
+     
+        mydata
+        
     })
 
 })
