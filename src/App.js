@@ -10,7 +10,7 @@ const puplicdirectorypath = path.join(__dirname, '/../puplic')
 const viewspath = path.join(__dirname, '/../html/views')
 const partialspath = path.join(__dirname, '/../html/partials')
 
-// setup handlebars engines and views location 
+// setup handlebars engines and views location
 app.set('view engine', 'hbs')
 app.set('views', viewspath)
 hbs.registerPartials(partialspath)
