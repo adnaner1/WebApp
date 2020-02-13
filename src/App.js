@@ -47,11 +47,9 @@ app.get('/Maintenance', (req , res) => {
 
 })
 
-
 app.get('/Files', (req , res) => {
 
     res.render('Files',{
-     
         
     })
 
